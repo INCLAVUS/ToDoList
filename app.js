@@ -89,9 +89,9 @@ app.post("/delete", function(req,res){
 
 });
 
+app.get("/", (req, res) => res.type('html').send(html));
 
 
-
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("server started on port 3000");
 });
